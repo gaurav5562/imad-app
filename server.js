@@ -17,8 +17,8 @@ app.get('/', function (req, res) {
 });
 
 
-var pool = new pg.Pool(config);
-app.get('/pool', function (req, res) {
+var pool = new Pool();
+app.get('/article-db', function (req, res) {
  pool.query('SELECT * FROM article', function(err, result){
      if(err){
          res.status(500).send(err.toString());
