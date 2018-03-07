@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 });
 
 
-const pool = new Pool();
+var pool = new Pool();
 app.get('/test-db', function (req, res) {
  pool.query('SELECT * FROM article', function(err, result){
      if(err){
