@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 
 
 var pool = new Pool();
-app.get('/test-db', function (req, res) {
+app.get('/article-db', function (req, res) {
  pool.query('SELECT * FROM article', function(err, result){
      if(err){
          res.status(500).send(err.toString());
